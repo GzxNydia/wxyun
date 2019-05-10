@@ -1,0 +1,8 @@
+<view class="index">
+<image class='indexBg' src='../../assets/img/indexBg.jpg' mode='aspectFill'></image>
+<button class="button" open-type="getUserInfo" bindgetuserinfo="onGetInfo">
+	<image mode="widthFix" class="cameraIcon" src="../../assets/icons/camera.png"></image>
+	<view class="buttonTxt">来晒照！</view>
+	<image mode="widthFix" class="rightIcon" src="../../assets/icons/rightArrow.png"></image>
+</button>
+</view>

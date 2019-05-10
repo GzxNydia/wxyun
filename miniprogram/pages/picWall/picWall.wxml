@@ -1,0 +1,62 @@
+<wxs module="m1">
+	function getArr(str){
+		return str.split("++");
+	}
+	module.exports.getArr = getArr;
+</wxs>
+<view class="picWall">
+    <view class="title">
+        <image mode="aspectFit" class="titleImg" src="../../assets/img/picWallTitle.png"></image>
+    </view>
+    <view class="selItems">
+        <view class="selItem {{curType==1?'activeItem':''}}" data-type="1" bindtap="switchType">
+            <image class="triangleIcon" src="../../assets/icons/triangle.png" mode="aspectFit"></image>
+            <text>按时间</text>
+        </view>
+        <view class="selItem {{curType==0?'activeItem':''}}" data-type="0" bindtap="switchType">
+             <image class="triangleIcon" src="../../assets/icons/triangle.png" mode="aspectFit"></image>
+            <text>按热度</text>
+        </view>
+    </view>
+    <!-- 主要内容区域 -->
+    <view class="content">
+			<!-- <view class="contentItem">
+					<image class="userImg" mode="widthFix" src="../../assets/img/picWall_03.jpg"></image>
+					<view class="itemText">
+							<view class="userInfo">
+									<view class="nickName">昵称昵称昵称昵称昵称昵称昵称昵称昵称昵称昵称昵称昵称昵称</view>
+									<view class="thumUp">
+											<image src="../../assets/icons/thumUp1.png" mode="aspectFit"></image>
+											<text>66666</text>
+									</view>
+							</view>
+							<view class="markers">
+									<text class="marker">#宝丽来#</text>
+									<text class="marker">#宝丽来#</text>
+									<text class="marker">#宝丽来#</text>
+									<text class="marker">#宝丽来#</text>
+									<text class="marker">#宝丽来#</text>
+									<text class="marker">#宝丽来#</text>
+									<text class="marker">#宝丽来#</text>
+							</view>
+					</view>
+				 
+			</view> -->
+			<view class="contentItem" wx:for="{{listArr}}" wx:key="{{index}}">
+				<!-- 用户图片 -->
+				<image data-src="{{item.picID}}" bindtap="preImg" class="userImg" mode="widthFix" src="{{item.picID}}"></image>
+				<view class="itemText">
+						<view class="userInfo">
+								<view class="nickName">{{item.nickName}}</view>
+								<view data-idx="{{index}}" data-id="{{item._id}}" class="thumUp" bindtap="onthumAction">
+										<image src="{{item.isLove==1?'../../assets/icons/thumUp1.png':'../../assets/icons/thumUp2.png'}}" mode="aspectFit"></image>
+										<text>{{item.thumb}}</text>
+								</view>
+						</view>
+						<view class="markers">
+								<text class="marker" wx:if="{{innerItem}}" wx:for-item="innerItem" wx:key="{{Math.random()}}" wx:for="{{m1.getArr(item.labelStr)}}">#{{innerItem}}#</text>
+						</view>
+				</view>
+      </view>
+     </view>
+</view>

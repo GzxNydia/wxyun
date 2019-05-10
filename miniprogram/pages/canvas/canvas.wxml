@@ -1,0 +1,25 @@
+<view class='canvas'>
+  <canvas disable-scroll="{{true}}" bindtouchstart="onTouchStart" bindtouchmove="onTouchMove" bindtouchend="onTouchEnd" id="myCan" class="myCan" canvas-id="myCan">
+    <cover-view class="backOriBtn" bindtap='backOri'>还原</cover-view>
+  </canvas>
+	<view class="tips">提示：捏放双指可缩放图片，点击拖动可移动图片</view>
+	<view class="hr"><text>点击添加滤镜标签 ↓</text></view>
+	<checkbox-group bindchange="checkboxChange" class="labels">
+		<label class="labelItem {{item.isSel?'activeLabel':''}}" wx:for="{{labelsArr}}" wx:key="{{index}}">
+			<checkbox hidden value="{{index}}"/>
+			<image mode="aspectFit" class="addIcon" src="{{item.isSel?'../../assets/icons/redIcon.png':'../../assets/icons/addIcon.png'}}"></image>  {{item.label}}
+		</label>
+		<label class="labelItem" bindtap="addMore">
+			<text class="addIcon"><text>+</text></text>  其 他
+		</label>
+	</checkbox-group>
+	<input confirm-type="添加" focus="{{true}}" wx:if="{{showIpt}}" class="labelIpt" type="text" maxlength="15" bindconfirm="onIptConfirm"/>
+  <button class="selPhotoBtn" bindtap='choosePic'>
+		<image class="reIcon" src="../../assets/icons/reIcon.png" mode="aspectFit"></image> 
+		重选图片
+	</button>
+  <button class="selPhotoBtn confirmBtn" bindtap="proImg">
+		<image class="reIcon" src="../../assets/icons/confirmIcon.png" mode="aspectFit"></image> 
+		确认提交
+	</button>
+</view>

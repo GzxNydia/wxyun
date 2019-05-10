@@ -1,0 +1,42 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/picWall/picWall",
+    "pages/canvas/canvas",
+    "pages/rule/rule",
+    "pages/ad/ad"
+  ],
+  "window": {
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "bluej勇敢晒照",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#000000",
+    "backgroundColor": "#ffffff",
+    "selectedColor": "#000000",
+    "list": [
+      {
+        "pagePath": "pages/ad/ad",
+        "iconPath": "assets/icons/1.png",
+        "selectedIconPath": "assets/icons/a.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/picWall/picWall",
+        "iconPath": "assets/icons/2.png",
+        "selectedIconPath": "assets/icons/b.png",
+        "text": "照片墙"
+      },
+      {
+        "pagePath": "pages/rule/rule",
+        "iconPath": "assets/icons/3.png",
+        "selectedIconPath": "assets/icons/c.png",
+        "text": "来晒照"
+      }
+    ]
+  },
+  "debug": false,
+  "sitemapLocation": "sitemap.json"
+}

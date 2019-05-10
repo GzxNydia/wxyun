@@ -1,0 +1,12 @@
+<view class="rule">
+  <image class="ruleBg" src="../../assets/img/ruleBg.jpg" mode="aspectFill"></image>
+  <scroll-view scroll-y="{{true}}" scroll-top="{{scrollTop}}" scroll-with-animation="{{true}}" class="content">
+    <image class="ruleTxt" src="../../assets/img/ruleTxt.png" mode="widthFix"></image>
+    <button class="button" bindtap='skipToCan'>
+      <image mode="widthFix" class="cameraIcon" src="../../assets/icons/camera.png"></image>
+      <view class="buttonTxt">抡起镜头，晒照</view>
+      <image mode="widthFix" class="rightIcon" src="../../assets/icons/rightArrow.png"></image>
+    </button>
+  </scroll-view>
+
+</view>

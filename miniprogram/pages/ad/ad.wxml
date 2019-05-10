@@ -1,0 +1,13 @@
+<view class="ad">
+  <swiper indicator-dots="{{true}}" indicator-color="rgba(255,255,255,.5)" indicator-active-color="#ffffff" autoplay="{{false}}" circular="{{true}}">
+    <swiper-item class="swiperItem swiperItem1">
+      <image class="swiperItem3Img" src="cloud://env-test-6f9a9f.656e-env-test-6f9a9f/6.jpg" mode="aspectFill"></image>
+    </swiper-item>
+    <swiper-item class="swiperItem">
+      <image class="swiperItem3Img" src="cloud://env-test-6f9a9f.656e-env-test-6f9a9f/manhua.png" mode="aspectFill"></image>
+    </swiper-item>
+    <swiper-item class="swiperItem">
+      <image class="swiperItem3Img" src="cloud://env-test-6f9a9f.656e-env-test-6f9a9f/色彩3.jpg" mode="aspectFill"></image>
+    </swiper-item>
+  </swiper>
+</view>
